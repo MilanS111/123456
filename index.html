@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('https://orizont.md/wp-content/uploads/2022/12/50086566077_100d6818a0_o-1024x533.jpg') no-repeat center center fixed;
+            background-size: cover;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        header {
+            background-color: rgba(52, 58, 64, 0.9);
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        nav {
+            background-color: rgba(33, 37, 41, 0.8);
+            padding: 0.5em 0;
+            text-align: center;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 0.5em;
+            font-weight: bold;
+            background-color: rgba(33, 37, 41, 0.8);
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: rgba(73, 80, 87, 0.8);
+            color: #ddd;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.5s ease-in-out;
+        }
+
+        .project-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1em;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: rgba(52, 58, 64, 0.9);
+            color: white;
+            padding: 1.5em 0;
+        }
+
+        #contact .profile-image img:hover {
+            transform: scale(1.1);
+        }
+
+        section {
+            margin: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            
+        }
+
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Milan</h1>
+        <p>Computer Science Enthusiast</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="container show">
+        <h2>About Me</h2>
+        <p>Your introduction goes here...</p>
+    </section>
+
+    <section id="skills" class="container show">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Java, Python, HTML, CSS, JavaScript</li>
+            <li>Web Development: Front-end and Back-end</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="container show">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Description of Project 1...</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Description of Project 2...</p>
+        </div>
+    </section>
+
+    <section id="education" class="container show">
+        <h2>Education</h2>
+        <p>Your educational background goes here...</p>
+    </section>
+
+    <section id="contact" class="container show">
+        <h2>Contact</h2>
+        <p>Email: milan@email.com</p>
+        <div class="profile-image">
+            <img src="" alt="Milan">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Milan - Portfolio</p>
+    </footer>
+     <script>
+        window.onload = function() {
+            let sections = document.querySelectorAll('section');
+            let delay = 0;
+
+            sections.forEach(section => {
+                setTimeout(() => {
+                    section.classList.add('show');
+                }, delay);
+                delay += 500;
+            });
+        };
+    </script>
+</body>
+
+</html>
